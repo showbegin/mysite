@@ -1,0 +1,7 @@
+<h1>{{date}}</h1>
+
+<ul>
+{% for case in date.cases_set.all %}
+    <li> {{ case.region }}: {{case.quantity}} инфицировано </li>
+{% endfor %}
+</ul>

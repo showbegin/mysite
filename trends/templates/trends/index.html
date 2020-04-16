@@ -1,0 +1,12 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'trends/style.css' %}">
+
+{% if last_dates %}
+    <ul>
+    {% for date in last_dates %}
+        <li><a href="{% url 'trends:date' date.id %}" >{{ date }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No dates are available.</p>
+{% endif %}
